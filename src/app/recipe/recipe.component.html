@@ -1,0 +1,40 @@
+
+<mat-toolbar color="primary">
+    <span>My Restaurant</span>
+  </mat-toolbar>
+<div *ngIf="!flag"  class="container background" fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="center stretch"
+    fxLayoutWrap fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <!-- <ng-container *ngFo></ng-container> -->
+    
+    <div fxFlex="25" *ngFor="let recipe of recipes">
+        
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header"> {{recipe.label}}</div>
+
+                <mat-card-title>{{recipe.name}} </mat-card-title>
+                <mat-card-subtitle>{{recipe.category}}</mat-card-subtitle>
+                
+            </mat-card-header>
+            
+            <img mat-card-image [src]="recipe.image"
+                [alt]="recipe.name" width="100%" height="60%">
+            <mat-card-content>
+               <b>{{recipe.price| currency}}</b>
+               
+                <p>
+                    <br>
+                   {{recipe.description}}
+                </p>
+            </mat-card-content>
+            <mat-card-footer>
+                <mat-card-actions align="center">
+                    <button mat-button (click)="open(recipe)" ><mat-icon>open_in_new</mat-icon>Open</button>
+                    <button mat-button ><mat-icon>share</mat-icon>SHARE</button>
+                </mat-card-actions>
+            </mat-card-footer>
+        </mat-card>
+    </div>
+
+
+</div>

@@ -1,0 +1,31 @@
+    .example-card {
+        max-width: 400px;
+    }
+    
+    .example-header {
+        position: absolute;
+        right: 0px;
+        color: red;
+        font-weight: bold;
+        
+    }
+    .container {
+        margin: 20px;
+        display:flex;
+       
+    }
+    mat-card{
+        height: 15cm;
+        margin-bottom: 10px;
+    }
+    mat-card-actions{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+   
+    
+
+   
+   
+ 
