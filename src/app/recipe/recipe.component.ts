@@ -19,7 +19,6 @@ export class RecipeComponent implements OnInit {
     })
   }
   open(recipe){
-   
     console.log(recipe);
     this.router.navigate([recipe.id], {relativeTo:this.activatedRoute, state: {data: recipe}});
 
