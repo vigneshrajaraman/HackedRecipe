@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { RecipeService } from './recipe-service.service';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [RecipeService],
+  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
